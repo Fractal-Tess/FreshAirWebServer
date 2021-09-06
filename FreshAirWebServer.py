@@ -1,9 +1,10 @@
-import http.server 
+import http.server
 import socketserver
 from infi.systray import SysTrayIcon
+
+import time
 import os
 import signal
-import time
 
 
 def on_quit_callback(_):
@@ -15,7 +16,7 @@ systray = SysTrayIcon("icon.ico", "Example tray icon", on_quit=on_quit_callback)
 systray.start()
 
 hostName = "localhost"
-serverPort = 8000
+serverPort = 8000 #
 
 
 class MyServer(http.server.SimpleHTTPRequestHandler):
